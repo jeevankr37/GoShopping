@@ -1,0 +1,36 @@
+package com.tns.inner;
+
+public class PrimeAcc extends ShopAcc{
+public static boolean isPrime;
+	
+	public PrimeAcc(int accNo, String accNm, float charges, boolean isPrime) {
+		super(accNo, accNm, charges);
+		this.setPrime(isPrime);
+	}
+	public void bookProduct(float charges)
+	{
+		System.out.println("Charges are: "+charges);
+	}
+	@Override
+	public String toString() {
+		return "PrimeAcount Details:-\nAcount Number-\t" + getAccNo() + "\nAccount Name-\t"+accNm+"\ncharges-\t" + getCharges();
+	
+	}
+	public boolean isPrime() {
+		return isPrime;
+	}
+	public void setPrime(boolean isPrime) {
+		try {
+			try {
+				PrimeAcc.isPrime =isPrime;
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+}
